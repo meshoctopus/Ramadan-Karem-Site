@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.hero {
+    background: url(img/bg.png);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hero header nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.hero header nav .logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.hero header nav .links a {
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+    transform: 0.3s ease;
+}
+
+.hero header nav .links a:hover {
+    color: aqua;
+}
+
+.hero header nav .links .btn_menu {
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+    transform: 0.3s ease;
+}
+
+.hero header nav .links .btn_menu:hover {
+    color: aqua;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    gap: 10%;
+}
+
+.container .div_text {
+    width: 50%;
+}
+
+.container .div_text h1 {
+    color: white;
+    font-size: 50px;
+}
+/*  */
+.container .div_text button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(8, 173, 188);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.container .div_text button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid rgb(8, 173, 188);
+}
+
+.container .div_text button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+
+.container .div_text button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgb(195, 58, 159);
+}
+
+.container .div_text button:hover {
+    color: white;
+}
+
+.container .div_text button:active span::before {
+    background: #2751cd;
+}
+
+/*  */
+.container .div_text p {
+    color: #888;
+    line-height: 1.5;
+    margin: 20px 0 40px 0;
+}
+
+.container .div_img {
+    width: 30%;
+}
+
+.container .div_img img {
+    width: 100%;
+}
